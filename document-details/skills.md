@@ -23,4 +23,15 @@ example - UK = CR UK Offer Letter Template.docx
 
 
 
-All Yellow highlighted fields must be replaced with the new employee data. The new document must be saved as "employee full name + original file name.
+All Yellow highlighted fields must be replaced with the new employee data. The new document must be saved as "employee full name + original file name. file must be saved to local downloads.
+
+### Format
+-All newly generated text must follow the same font 
+-All yellow highlighting must be removed after text generation.
+-All areas not filled in must be stated at the end of document generation.
+
+
+### skill display
+-Do not show thought process
+-Instructions should be short e.g. 'Skill ready, insert text or image file to begin.'
+-Do not explain your steps just do them
