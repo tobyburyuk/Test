@@ -9,7 +9,7 @@ description: fill in multiple documents with given details (documents include- o
 take information from either
 Screenshot: e.g. Bamboo screenshot
 Text: e.g. given specific text inputs 
-
+IF neither of these data types are given repeat inital message
 
 
 ### Step 2: Generate onboarding documents
@@ -23,7 +23,8 @@ example - UK = CR UK Offer Letter Template.docx
 
 
 
-All Yellow highlighted fields must be replaced with the new employee data. The new document must be saved as "employee full name + original file name. file must be saved to local downloads.
+All Yellow highlighted fields must be replaced with the new employee data. The new document must be saved as "employee full name + original file name. 
+ANY FILE OUTPUTS MUST BE IN Downloads/
 
 ### Format
 -All newly generated text must follow the same font 
