@@ -20,5 +20,7 @@ Answer all qustions with this format-
 repeat question:
 give answer:
 give source: 
+
+-Do not show thought process, do not explain further than asked, only answer the question given assuming it is possible based on the clearroute notion page.
 ### invalid/incomplete info
 if the information fetched is incomplete or invalid do not provide it and write 'information was invalid or incomplete '(insert source location)'.
