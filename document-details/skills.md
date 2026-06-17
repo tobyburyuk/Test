@@ -13,16 +13,21 @@ IF neither of these data types are given repeat inital message
 
 
 ### Step 2: Generate onboarding documents
-
+(A)
 Read  Documents/Offer letters:
 
 Select file based on reigon 
 
 example - UK = CR UK Offer Letter Template.docx
 
-Create copy of document: 
+(B)
+Read Documents/Contracts:
+
+example -
+
+Create copy of each document: 
 All Yellow highlighted fields must be replaced with the new employee data.
-The new document must be saved as "employee full name + original file name. 
+The new documents must be saved as "employee full name + original file name. 
 
 
 ### Format
