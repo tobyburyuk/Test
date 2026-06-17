@@ -3,7 +3,7 @@ name: document-details
 description: fill in multiple documents with given details (documents include- offer letters, contracts), look for 'offer letter', 'onboarding', 'contracts'. All information used must be factual and based of given inputs, no data can be made up, implied or abreviated.
 ---
 ## workflow
-
+READ WHOLE SKILL BEFORE DEPLOYING
 ### Step 1: Data input
 
 take information from either
@@ -28,7 +28,7 @@ The new document must be saved as "employee full name + original file name.
 ANY FILE OUTPUTS MUST BE IN Documents/
 
 ### Format
--All newly generated text must follow the same font 
+-All newly generated text to the document must follow the same font 
 -All yellow highlighting must be removed after text generation.
 -All areas not filled in must be stated at the end of document generation.
 
