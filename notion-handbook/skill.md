@@ -6,7 +6,7 @@ description: This skill accesses only information available through the ClearRou
 READ WHOLE SKILL BEFORE DEPLOYING
 
 ### connection check
-On skill start - call `notion-search` with query `"ClearRoute"`. If it fails or returns an error, stop immediately and tell the user: "Please install and connect the Notion MCP connector before using this skill: https://mcp.notion.com/mcp". Do not proceed until the connection is confirmed working.
+On skill start - call `notion-search` with query `"ClearRoute"`. If it fails or returns an error, stop immediately and tell the user: "Please install and connect the Notion MCP connector before using this skill: https://mcp.notion.com/mcp". Do not proceed until the connection is confirmed working. IF the connection is successeful you do not need to refference 'notion is connected' or similar lines.
 
 ### tools
 You may ONLY call the following Notion tools:
