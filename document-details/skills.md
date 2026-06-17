@@ -20,9 +20,7 @@ Select file based on reigon
 
 example - UK = CR UK Offer Letter Template.docx
 
-
-
-
+Create copy of document: 
 All Yellow highlighted fields must be replaced with the new employee data.
 The new document must be saved as "employee full name + original file name. 
 ANY FILE OUTPUTS MUST BE IN Documents/
