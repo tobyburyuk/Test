@@ -23,8 +23,9 @@ example - UK = CR UK Offer Letter Template.docx
 
 
 
-All Yellow highlighted fields must be replaced with the new employee data. The new document must be saved as "employee full name + original file name. 
-ANY FILE OUTPUTS MUST BE IN Downloads/
+All Yellow highlighted fields must be replaced with the new employee data.
+The new document must be saved as "employee full name + original file name. 
+ANY FILE OUTPUTS MUST BE IN Documents/
 
 ### Format
 -All newly generated text must follow the same font 
