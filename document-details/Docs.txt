@@ -1,0 +1,10 @@
+Required installations: 
+--> Microsoft 365 connector
+--> Slack connector
+(If not isntalled shall be prompted during skill activation)
+
+Skill Function: 
+1- Takes various imputs of new employee data and accesses and applies
+the data to the multiple documents depending on reigon (contract, offer letter)
+2- Takes necessery members names and creates a private slack group and provides
+basic information on the new employee.
