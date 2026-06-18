@@ -22,7 +22,7 @@ If Slack tools are unavailable, instruct the user:
 
 ### Document creation
 You will be editing and creating copies for the following documents, Contract, Offer letter,... :
-use sharepoint_folder_search "test", use read_recourse Select file based on reigon 
+Use sharepoint_search query "CR" + region + "Offer Letter Template" (e.g. "CR UK Offer Letter Template"); if no result, fallback to sharepoint_search query "Offer Letter Template". Use read_resource with the returned URI to retrieve the file. Select file based on region.
 
 example: UK = CR UK Offer Letter Template.docx
 
