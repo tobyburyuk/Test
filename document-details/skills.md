@@ -18,9 +18,7 @@ If SharePoint tools are unavailable, instruct the user:
 "Please install the Microsoft 365 connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://microsoft365.mcp.claude.com/mcp"
 
 
-sharepoint_folder_search testing/test
-
-Select file based on reigon 
+use sharepoint_folder_search "test", use read_recourse Select file based on reigon 
 
 example - UK = CR UK Offer Letter Template.docx
 
