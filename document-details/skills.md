@@ -7,18 +7,23 @@ READ WHOLE SKILL BEFORE DEPLOYING
 ### Step 1: Data input
 
 take information from either
-Screenshot: e.g. Bamboo screenshot
+Screenshot: e.g. Email screenshot
 Text: e.g. given specific text inputs 
 IF neither of these data types are given repeat inital message
 
 
 ### Step 2: Generate onboarding documents
 (A)
-Read  Documents/Offer letters:
+If SharePoint tools are unavailable, instruct the user:
+"Please install the Microsoft 365 connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://microsoft365.mcp.claude.com/mcp"
+
+
+sharepoint_folder_search testing/test
 
 Select file based on reigon 
 
 example - UK = CR UK Offer Letter Template.docx
+
 
 (B)
 Read Documents/Contracts:
