@@ -49,9 +49,15 @@ The new documents must be saved as "employee full name + original file name.
 ### - Talent team
 ### - Manager
 ### Create a short message including: New employees name, Title, Engagement, start date.
+### Create a Veiw tab with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
 
 
 ### skill display
 -Do not show thought process
 -Instructions should be short e.g. 'Skill ready, insert text or image file to begin.'
 -Do not explain your steps just do them
+-Ask user if they would like to preview the files within Claude before download
+
+yes --> Create preview of all documents, create veiw box with tick box for approval on each file --> if file rejected ask for alterations, apply alterations exactly DO NOT ask additional questions. 
+
+No --> download files
