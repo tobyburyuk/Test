@@ -40,16 +40,17 @@ The new documents must be saved as "employee full name + original file name.
 
 
 ### Slack group creation
+IMPORTANT: Do not start this step untill all document approval has been given.
 
-### Create group chat in slack with the following information
-### name: (insert new employees full name)+ onboarding introduction
-### members: 
-### - engagement lead 
-### - People & culture
-### - Talent team
-### - Manager
-### Create a short message including: New employees name, Title, Engagement, start date.
-### Create a Veiw tab with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
+Create group chat in slack with the following information
+name: (insert new employees full name)+ onboarding introduction
+members: 
+engagement lead 
+People & culture
+Talent team
+Manager
+Create a short message including: New employees name, Title, Engagement, start date.
+Create a Veiw tab with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
 
 
 ### skill display
