@@ -12,18 +12,20 @@ Text: e.g. given specific text inputs
 IF neither of these data types are given repeat inital message
 
 
-### Step 2: Generate onboarding documents
-(A)
+### Step 2: Setting up tools
+
 If SharePoint tools are unavailable, instruct the user:
 "Please install the Microsoft 365 connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://microsoft365.mcp.claude.com/mcp"
 
+If Slack tools are unavailable, instruct the user:
+"Please install the Slack connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://mcp.slack.com/mcp"
+
+### Document creation
 
 use sharepoint_folder_search "test", use read_recourse Select file based on reigon 
 
 example - UK = CR UK Offer Letter Template.docx
 
-
-(B)
 Read Documents/Contracts:
 
 example -
@@ -37,6 +39,18 @@ The new documents must be saved as "employee full name + original file name.
 -All newly generated text to the document must follow the same font 
 -All yellow highlighting must be removed after text generation.
 -All areas not filled in must be stated at the end of document generation.
+
+
+### Slack group creation
+
+### Create group chat in slack with the following information
+### name: (insert new employees full name)+ onboarding introduction
+### members: 
+### - engagement lead 
+### - People & culture
+### - Talent team
+### - Manager
+### Create a short message including: New employees name, Title, Engagement, start date.
 
 
 ### skill display
