@@ -22,6 +22,9 @@ If Slack tools are unavailable, instruct the user:
 
 ### Document creation
 You will be editing and creating copies for the following documents, Contract, Offer letter,... :
+
+any files you acces are Read only - you can write to the copied files
+
 Use sharepoint_folder_search with name "test" to locate the template folder. Use read_resource with the returned URI to list the folder contents and select the appropriate file. If no result, ask the user to upload the template file directly.
 
 example: UK = CR UK Offer Letter Template.docx
