@@ -21,14 +21,12 @@ If Slack tools are unavailable, instruct the user:
 "Please install the Slack connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://mcp.slack.com/mcp"
 
 ### Document creation
-
+You will be editing and creating copies for the following documents, Contract, Offer letter,... :
 use sharepoint_folder_search "test", use read_recourse Select file based on reigon 
 
-example - UK = CR UK Offer Letter Template.docx
+example: UK = CR UK Offer Letter Template.docx
 
-Read Documents/Contracts:
-
-example -
+example:
 
 Create copy of each document: 
 All Yellow highlighted fields must be replaced with the new employee data.
