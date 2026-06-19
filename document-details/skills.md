@@ -31,6 +31,12 @@ example: UK = CR UK Offer Letter Template.docx
 
 example:
 
+
+Talent Team: is issusing signatory ALWAYS
+
+
+You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same
+
 Create copy of each document: 
 All Yellow highlighted fields must be replaced with the new employee data.
 The new documents must be saved as "employee full name + original file name. 
