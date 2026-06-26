@@ -4,12 +4,6 @@ description: Fill in and generate onboarding documents (offer letters, contracts
 ---
 ## workflow
 READ WHOLE SKILL BEFORE DEPLOYING
-### Step 1: Data input
-
-take information from either
-Screenshot: e.g. Email screenshot
-Text: e.g. given specific text inputs 
-IF neither of these data types are given repeat initial message
 
 
 ### Step 1: Setting up tools
@@ -35,10 +29,7 @@ You will be editing and creating copies for the following documents, Contract, O
 
 any files you acces are Read only - you can write to the copied files
 
-Use sharepoint_folder_search to locate the template folder for the employee's region (e.g. "CLAUDE TEST TEMPLATE UK"). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use download_document to save the template to the local filesystem. Use the docx skill to edit the downloaded file — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, upload the completed document back to SharePoint.
-
-
-Talent Team: is issusing signatory ALWAYS
+Use sharepoint_folder_search to locate the template folder for the employee's region (e.g. "CLAUDE TEST TEMPLATE UK"). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use read_resource to save the template to the local filesystem. Use the docx skill to edit the downloaded file — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no reigon template is found prompt the user to specify reigon or upload document.
 
 
 You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same 
@@ -63,13 +54,11 @@ People & culture
 Talent team
 Manager
 Create a short message including: New employees name, Title, Engagement, start date.
-Create a View tab with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
+Create a AskUserQuestion with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
 
 
 ### skill display
--Do not show thought process
--Instructions should be short e.g. 'Skill ready, insert text or image file to begin.'
--Do not explain your steps just do them
+-Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
 
 ### Output 
 -Ask user if they would like to preview the files within Claude before download
