@@ -1,6 +1,6 @@
 ---
 name: document-details
-description: fill in multiple documents with given details (documents include- offer letters, contracts), look for 'offer letter', 'onboarding', 'contracts'. All information used must be factual and based of given inputs, no data can be made up, implied or abreviated.
+description: Fill in and generate onboarding documents (offer letters, contracts) from employee data, then create a Slack introduction group. Use whenever someone mentions offer letters, contracts, onboarding documents, new hire paperwork, document templates, or starting a new employee. All information must be factual and based on given inputs — nothing may be invented, implied, or abbreviated.
 ---
 ## workflow
 READ WHOLE SKILL BEFORE DEPLOYING
@@ -9,10 +9,10 @@ READ WHOLE SKILL BEFORE DEPLOYING
 take information from either
 Screenshot: e.g. Email screenshot
 Text: e.g. given specific text inputs 
-IF neither of these data types are given repeat inital message
+IF neither of these data types are given repeat initial message
 
 
-### Step 2: Setting up tools
+### Step 1: Setting up tools
 
 If SharePoint tools are unavailable, instruct the user:
 "Please install the Microsoft 365 connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://microsoft365.mcp.claude.com/mcp"
@@ -20,26 +20,28 @@ If SharePoint tools are unavailable, instruct the user:
 If Slack tools are unavailable, instruct the user:
 "Please install the Slack connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://mcp.slack.com/mcp"
 
+### Step 2: Data input
+
+take information from either
+Screenshot: e.g. Email screenshot
+Text: e.g. given specific text inputs 
+IF neither of these data types are given repeat inital message
+
 ### Document creation
-You will be editing and creating copies for the following documents, Contract, Offer letter,... :
+
+Use the `docx` skill for all document manipulation — replacing highlighted fields, matching fonts, and removing yellow highlighting.
+
+You will be editing and creating copies for the following documents, Contract, Offer letter. You are essentially filling in the gaps :
 
 any files you acces are Read only - you can write to the copied files
 
-Use sharepoint_folder_search with name "Offer Letters and Contracts" to locate the template folder. Use read_resource with the returned URI to list the folder contents and select the appropriate file. If no result, ask the user to upload the template file directly.
-
-example: UK = CR UK Offer Letter Template.docx
-
-example:
+Use sharepoint_folder_search to locate the template folder for the employee's region (e.g. "CLAUDE TEST TEMPLATE UK"). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use download_document to save the template to the local filesystem. Use the docx skill to edit the downloaded file — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, upload the completed document back to SharePoint.
 
 
 Talent Team: is issusing signatory ALWAYS
 
 
-You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same
-
-Create copy of each document: 
-All Yellow highlighted fields must be replaced with the new employee data.
-The new documents must be saved as "employee full name + original file name. 
+You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same 
 
 
 ### Format
@@ -49,7 +51,9 @@ The new documents must be saved as "employee full name + original file name.
 
 
 ### Slack group creation
-IMPORTANT: Do not start this step untill all document approval has been given.
+IMPORTANT: Do not start this step until all document approval has been given.
+
+Before creating the group chat, use slack_search_users to find each member by their name or role. Confirm the matches before adding them.
 
 Create group chat in slack with the following information
 name: (insert new employees full name)+ onboarding introduction
@@ -59,7 +63,7 @@ People & culture
 Talent team
 Manager
 Create a short message including: New employees name, Title, Engagement, start date.
-Create a Veiw tab with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
+Create a View tab with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
 
 
 ### skill display
