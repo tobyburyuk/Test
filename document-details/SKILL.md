@@ -19,7 +19,7 @@ If Slack tools are unavailable, instruct the user:
 take information from either
 Screenshot: e.g. Email screenshot
 Text: e.g. given specific text inputs 
-IF neither of these data types are given repeat initial message
+IF neither of these data types are given repeat "Skill ready — please paste employee details or share a screenshot to begin."
 
 ### Document creation
 
@@ -29,7 +29,7 @@ You will be editing and creating copies for the following documents, Contract, O
 
 any files you access are Read only - you can write to the copied files
 
-Use sharepoint_folder_search to locate the template folder for the employee's region (e.g. "CLAUDE TEST TEMPLATE UK"). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use document_download to save the template to the local filesystem. Use the docx skill to edit the downloaded file — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
+Use sharepoint_folder_search to locate the template folder for the employee's region (e.g. "CLAUDE TEST TEMPLATE UK"). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. se read_resource with the file URI to fetch the document content, then write it to a local temp file (e.g. /tmp/[filename].docx) before passing it to the docx skill.. Use the docx skill to edit the downloaded file — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
 
 
 You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same 
