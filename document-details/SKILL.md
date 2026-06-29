@@ -56,6 +56,10 @@ Manager
 Create a short message including: New employees name, Title, Engagement, start date.
 Create a AskUserQuestion with "would you like to create a group chat with the following members: list members" yes/no box BEFORE creating this group chat
 
+### Slack Scheduling 
+use slack_schedule_message to set up reminders for the manager to set up probation meetings at 2 different dates
+1 - 5 weeks after start date, message: "alert manager to set up probation meeting with new employee, [insert date 6 weeks from start]"
+2 - 11 weeks after start date, message: "alert manager to set up probation meeting with new employee, [insert date 12 weeks from start]"
 
 ### skill display
 -Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
