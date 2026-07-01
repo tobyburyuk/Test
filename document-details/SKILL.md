@@ -18,6 +18,9 @@ If SharePoint tools are unavailable, instruct the user:
 If Slack tools are unavailable, instruct the user:
 "Please install the Slack connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://mcp.slack.com/mcp"
 
+If Chrome browser tools are unavailable, instruct the user:
+"Please install the Claude in Chrome extension — add it from the Chrome Web Store: https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn then restart Claude desktop to connect it."
+
 ### Step 2: Data input
 
 take information from either
