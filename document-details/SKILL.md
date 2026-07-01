@@ -29,10 +29,29 @@ You will be editing and creating copies for the following documents, Contract, O
 
 any files you access are Read only - you can write to the copied files
 
-Use sharepoint_folder_search to locate the template folder for the employee's region (test/testing/test/CR UK Offer Letter Template). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use read_resource with the file URI to fetch the document content, then write it to a local temp file (e.g. /tmp/[filename].docx) before passing it to the docx skill.. Use the docx skill to edit the downloaded file — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
+Use sharepoint_folder_search to locate the template folder for the employee's region (test/testing/test). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use read_resource with the file URI to fetch the document content, — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
 
+Step 1 — Load Chrome tools
+Load via ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__find,mcp__claude-in-chrome__get_page_text
+Step 2 — Navigate to the template folder
+Use the SharePoint folder URI returned by sharepoint_folder_search in the document creation step. Extract the webUrl from that result and navigate to its parent folder in Chrome. If no URI was found, ask the user to manually upload the document to claude. 
+Step 3 — Locate and download the file,
+Read the folder contents using get_page_text to identify the correct template filename
+Right-click the target file → Download, Wait 3 seconds for the download to complete
+Step 4 - request access (mcp__cowork__request_cowork_directory) to the files that where downloaded.
+Step 5 — Save to a consistent output folder
+Create the output folder if it doesn't exist: ~/Downloads/ClearRoute Onboarding/
+
+— replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
 
 You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same 
+
+### Documents produced
+-Offer letter
+-Contract letter
+-Probation completion letter
+
+Make sure all 3 documents are produced and approved before continuing, unless user specifies otherwise.
 
 
 ### Format
@@ -60,7 +79,7 @@ Create a AskUserQuestion with "would you like to create a group chat with the fo
 use slack_schedule_message to set up reminders for the manager to set up probation meetings at 2 different dates
 
 1 - 5 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their mid-probation checkin, ensure this is scheduled by [insert date 6 weeks after start]
-2 - 11 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their end-of-probation checkin, ensure this is scheduled by [insert date 12 weeks after start]
+2 - 11 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their end-of-probation checkin, ensure this is scheduled by [insert date 12 weeks after start], Include [Probation letter] as an attachment.
 
 ### skill display
 -Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
