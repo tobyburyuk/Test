@@ -89,6 +89,7 @@ use slack_schedule_message to set up reminders for the manager to set up probati
 
 ### skill display
 -Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
+-Do not narrate actions. Do not announce what you are about to do. Execute silently and only speak when you need input from the user or have a final result to present.
 
 ### Output 
 -Ask user if they would like to preview the files within Claude before download
