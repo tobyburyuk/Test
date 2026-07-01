@@ -60,9 +60,9 @@ Create the output folder if it doesn't exist: ~/Downloads/ClearRoute Onboarding/
 You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same 
 
 ### Documents produced
--Offer letter
--Contract letter
--Probation completion letter
+->Offer letter
+->Contract letter
+->Probation completion letter
 
 Make sure all 3 documents are produced and approved before continuing, unless user specifies otherwise.
 
