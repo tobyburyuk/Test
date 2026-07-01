@@ -31,14 +31,20 @@ any files you access are Read only - you can write to the copied files
 
 Use sharepoint_folder_search to locate the template folder for the employee's region (test/testing/test). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use read_resource with the file URI to fetch the document content, — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
 
+(read each step before executing, do not skip any steps)
 Step 1 — Load Chrome tools
 Load via ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__find,mcp__claude-in-chrome__get_page_text
+
 Step 2 — Navigate to the template folder
 Use the SharePoint folder URI returned by sharepoint_folder_search in the document creation step. Extract the webUrl from that result and navigate to its parent folder in Chrome. If no URI was found, ask the user to manually upload the document to claude. 
+
 Step 3 — Locate and download the file,
 Read the folder contents using get_page_text to identify the correct template filename
 Right-click the target file → Download, Wait 3 seconds for the download to complete
-Step 4 - request access (mcp__cowork__request_cowork_directory) to the files that where downloaded.
+
+Step 4 - STOP — DO NOT PROCEED until folder access is confirmed. After download, immediately call mcp__cowork__request_cowork_directory for ~/Downloads. If this fails or is skipped, halt and tell the user before doing anything else.
+If the template file cannot be accessed via the shell, stop immediately and tell the user. Never recreate a document from scratch as a workaround — all formatting and branding will be lost.
+
 Step 5 — Save to a consistent output folder
 Create the output folder if it doesn't exist: ~/Downloads/ClearRoute Onboarding/
 
