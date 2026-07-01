@@ -58,8 +58,9 @@ Create a AskUserQuestion with "would you like to create a group chat with the fo
 
 ### Slack Scheduling 
 use slack_schedule_message to set up reminders for the manager to set up probation meetings at 2 different dates
-1 - 5 weeks after start date, message: "alert manager to set up probation meeting with new employee, [insert date 6 weeks from start]"
-2 - 11 weeks after start date, message: "alert manager to set up probation meeting with new employee, [insert date 12 weeks from start]"
+
+1 - 5 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their mid-probation checkin, ensure this is scheduled by [insert date 6 weeks after start]
+2 - 11 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their end-of-probation checkin, ensure this is scheduled by [insert date 12 weeks after start]
 
 ### skill display
 -Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
