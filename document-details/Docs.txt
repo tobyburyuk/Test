@@ -8,3 +8,4 @@ Skill Function:
 the data to the multiple documents depending on reigon (contract, offer letter)
 2- Takes necessery members names and creates a private slack group and provides
 basic information on the new employee.
+3- Creates slack scheduled messages to managers based on the probation dates required
