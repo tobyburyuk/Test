@@ -5,6 +5,10 @@ description: Fill in and generate onboarding documents (offer letters, contracts
 ## workflow
 READ WHOLE SKILL BEFORE DEPLOYING
 
+### skill display
+THE FOLLOWING SECTION APPLIES TO THE ENTIRE SKILL, NOT JUST THE DOCUMENT CREATION PORTION
+-Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
+-Do not narrate actions. Do not announce what you are about to do. Execute silently and only speak when you need input from the user or have a final result to present.
 
 ### Step 1: Setting up tools
 
@@ -87,9 +91,6 @@ use slack_schedule_message to set up reminders for the manager to set up probati
 1 - 5 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their mid-probation checkin, ensure this is scheduled by [insert date 6 weeks after start]
 2 - 11 weeks after start date, message: :alert: Reminder [insert employees name] is coming up for their end-of-probation checkin, ensure this is scheduled by [insert date 12 weeks after start], Include [Probation letter] as an attachment.
 
-### skill display
--Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
--Do not narrate actions. Do not announce what you are about to do. Execute silently and only speak when you need input from the user or have a final result to present.
 
 ### Output 
 -Ask user if they would like to preview the files within Claude before download
