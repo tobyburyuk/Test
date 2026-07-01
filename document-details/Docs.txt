@@ -1,7 +1,7 @@
 Required installations: 
 --> Microsoft 365 connector
 --> Slack connector
-(If not isntalled shall be prompted during skill activation)
+(If not installed shall be prompted during skill activation)
 
 Skill Function: 
 1- Takes various imputs of new employee data and accesses and applies
