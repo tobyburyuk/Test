@@ -10,7 +10,7 @@ THE FOLLOWING SECTION APPLIES TO THE ENTIRE SKILL, NOT JUST THE DOCUMENT CREATIO
 -Do not show thought process,Instructions should be short e.g. 'Skill ready, insert text or image file to begin.', Do not explain your steps just do them
 -Do not narrate actions. Do not announce what you are about to do. Execute silently and only speak when you need input from the user or have a final result to present.
 
-### Step 1: Setting up tools
+### Setting up tools
 
 If SharePoint tools are unavailable, instruct the user:
 "Please install the Microsoft 365 connector — add it in Claude Settings → Connectors → Add custom connector using this URL: https://microsoft365.mcp.claude.com/mcp"
@@ -21,14 +21,14 @@ If Slack tools are unavailable, instruct the user:
 If Chrome browser tools are unavailable, instruct the user:
 "Please install the Claude in Chrome extension — add it from the Chrome Web Store: https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn then restart Claude desktop to connect it."
 
-### Step 2: Data input
+### User input
 
 take information from either
 Screenshot: e.g. Email screenshot
 Text: e.g. given specific text inputs 
 IF neither of these data types are given repeat "Skill ready — please paste employee details or share a screenshot to begin."
 
-### Document creation
+### Document download/creation
 
 Use the `docx` skill for all document manipulation — replacing highlighted fields, matching fonts, and removing yellow highlighting.
 
@@ -36,25 +36,30 @@ You will be editing and creating copies for the following documents, Contract, O
 
 any files you access are Read only - you can write to the copied files
 
+### Sharepoint search and file retrieval
 Use sharepoint_folder_search to locate the template folder for the employee's region (test/testing/test). If region is unknown, ask the user before searching. Use read_resource with the returned URI to list the folder contents and identify the correct file. Use read_resource with the file URI to fetch the document content, — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
 
-(read each step before executing, do not skip any steps)
-Step 1 — Load Chrome tools
-Load via ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__find,mcp__claude-in-chrome__get_page_text
 
-Step 2 — Navigate to the template folder
-Use the SharePoint folder URI returned by sharepoint_folder_search in the document creation step. Extract the webUrl from that result and navigate to its parent folder in Chrome. If no URI was found, ask the user to manually upload the document to claude. 
+### Chrome extension instructions (read each step before executing, do not skip any steps)
 
-Step 3 — Locate and download the file,
-Read the folder contents using get_page_text to identify the correct template filename
-Right-click the target file → Download, Wait 3 seconds for the download to complete
+  ### Step 1 — Load Chrome tools
+  Load via ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__find,mcp__claude-in-chrome__get_page_text
 
-Step 4 - STOP — DO NOT PROCEED until folder access is confirmed. After download, immediately call mcp__cowork__request_cowork_directory for ~/Downloads. If this fails or is skipped, halt and tell the user before doing anything else.
-If the template file cannot be accessed via the shell, stop immediately and tell the user. Never recreate a document from scratch as a workaround — all formatting and branding will be lost.
+  ### Step 2 — Navigate to the template folder
+  Use the SharePoint folder URI returned by sharepoint_folder_search in the document creation step. Extract the webUrl from that result and navigate to its parent folder in Chrome. If no URI was found, ask the user to manually upload the document to claude. 
 
-Step 5 — Save to a consistent output folder
-Create the output folder if it doesn't exist: ~/Downloads/ClearRoute Onboarding/
+  ### Step 3 — Locate and download the file,
+  Read the folder contents using get_page_text to identify the correct template filename
+  Right-click the target file → Download, Wait 3 seconds for the download to complete
 
+  ### Step 4 — Confirm folder access
+  STOP — DO NOT PROCEED until folder access is confirmed. After download, immediately call mcp__cowork__request_cowork_directory for ~/Downloads. If this fails or is skipped, halt and tell the user before doing anything else.
+  If the template file cannot be accessed via the shell, stop immediately and tell the user. Never recreate a document from scratch as a workaround — all formatting and branding will be lost.
+
+  ### Step 5 — Save to a consistent output folder
+  Create the output folder if it doesn't exist: ~/Downloads/ClearRoute Onboarding/
+
+### Document editing instructions
 — replace all yellow highlighted fields with the new employee data, match all new text to the existing font, and remove all yellow highlighting. Save the file as "employee full name + original file name". Once approved, download the new file. If no region template is found prompt the user to specify region or upload document.
 
 You are cloning and editing existing file NOT creating your own, all headers and design specs should remain the same 
@@ -67,7 +72,7 @@ You are cloning and editing existing file NOT creating your own, all headers and
 Make sure all 3 documents are produced and approved before continuing, unless user specifies otherwise.
 
 
-### Format
+### Format rules
 -All newly generated text to the document must follow the same font 
 -All yellow highlighting must be removed after text generation.
 -All areas not filled in must be stated at the end of document generation.
