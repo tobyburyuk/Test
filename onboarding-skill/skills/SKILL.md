@@ -1,5 +1,5 @@
 ---
-name: document-details
+name: onboarding-skill
 description: Downloading file templates utilising sharepoint and chrome extension. Filling in and generate onboarding documents (offer letters, contracts) from employee data, then create a Slack introduction group. Final step is to schedule reminders for probation meetings. Use whenever someone mentions offer letters, contracts, onboarding documents, new hire paperwork, document templates, or starting a new employee. All information must be factual and based on given inputs — nothing may be invented, implied, or abbreviated.
 ---
 ## workflow
