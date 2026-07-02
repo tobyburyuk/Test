@@ -1,6 +1,7 @@
 Required installations: 
 --> Microsoft 365 connector
 --> Slack connector
+--> Chrome connector 
 (If not installed shall be prompted during skill activation)
 
 Skill Function: 
