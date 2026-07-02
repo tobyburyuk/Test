@@ -1,5 +1,5 @@
 {
-  "name": "document-details",
+  "name": "onboarding-skill",
   "description": "Streamlines the ClearRoute onboarding process by automating the generation of employee documents, creating Slack introduction groups, and scheduling probation reminders.",
   "version": "1.0.0"
 }
